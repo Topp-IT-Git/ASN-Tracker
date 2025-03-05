@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+}
+
+body {
+    width:500px;
+    margin-left:150px;
+    border:1px  grey;
+    border-radius:10%;
+    
+}
+.bb{background:rgb(191, 191, 79) ;
+}
+
+h2{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;;
+    
+    border-radius: 25px;
+}
+
+h3 {
+    padding: 10px;
+}
+
+table,th,tr,td {
+width:100%;
+    border: 1px solid rgb(216, 89, 178);
+    border-collapse: collapse;
+    padding: 0.5rem;
+  
+}
+th {
+    text-align: left;
+}
+
+p{ 
+    
+margin-left: 10px;
+ padding:  5px;
+ display:flex;
+ flex-direction: row;
+ font-size: 12px;
+ 
+}
+
+
+
