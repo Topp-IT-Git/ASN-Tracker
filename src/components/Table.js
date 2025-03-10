@@ -1,3 +1,4 @@
+import './style.css';
 import React from 'react'
 import { useState,useEffect } from 'react'
 export default function Table(){
@@ -23,7 +24,7 @@ export default function Table(){
     <tr>
     <th>Koersen</th>
     {Object.keys(data[0].prices).map(price =>
-          (<td>{price}</td>
+    (<td className="datums">{price}</td>
             
           ))}
     </tr>
@@ -32,7 +33,7 @@ export default function Table(){
     <tbody>
     {data.map(fund => (
     <tr>
-          <th key={fund.fundId}>{fund.fundName.slice(4)}</th>
+            <th key={fund.fundId}>{fund.fundName.slice(4)}</th>
         {Object.values(fund.prices).map(price =>(
           <td>{price}</td>
           ))}
