@@ -22,6 +22,7 @@ export default function Table(){
 <thead>
     <tr>
     <th>Koersen</th>
+    {/*hieronder wordt door de data geparsed het verwerkt de bovenste rij van de tabel. hierin vind je de kopje koersen en de datums van elke aandeel*/}
     {Object.keys(data[0].prices).map(price =>
           (<td>{price}</td>
             
@@ -30,6 +31,7 @@ export default function Table(){
     </thead>
 
     <tbody>
+    {/*Hieronder worden de namen van de bedrijven van de aandelen in de kopje verwerkt en dan de koers */}
     {data.map(fund => (
     <tr>
           <th key={fund.fundId}>{fund.fundName.slice(4)}</th>
