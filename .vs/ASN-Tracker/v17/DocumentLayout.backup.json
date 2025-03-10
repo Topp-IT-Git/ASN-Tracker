@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\ramon\\Documents\\Applicatie Ontwikkeling\\Mijn Projecten\\Topit\\ASN-Tracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramon\\Documents\\Applicatie Ontwikkeling\\Mijn Projecten\\Topit\\ASN-Tracker\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramon\\Documents\\Applicatie Ontwikkeling\\Mijn Projecten\\Topit\\ASN-Tracker\\src\\components\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -39,32 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "package.json",
-              "DocumentMoniker": "C:\\Users\\ramon\\Documents\\Applicatie Ontwikkeling\\Mijn Projecten\\Topit\\ASN-Tracker\\package.json",
-              "RelativeDocumentMoniker": "package.json",
-              "ToolTip": "C:\\Users\\ramon\\Documents\\Applicatie Ontwikkeling\\Mijn Projecten\\Topit\\ASN-Tracker\\package.json",
-              "RelativeToolTip": "package.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-10T14:57:37.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\ramon\\Documents\\Applicatie Ontwikkeling\\Mijn Projecten\\Topit\\ASN-Tracker\\src\\components\\style.css",
               "RelativeDocumentMoniker": "src\\components\\style.css",
               "ToolTip": "C:\\Users\\ramon\\Documents\\Applicatie Ontwikkeling\\Mijn Projecten\\Topit\\ASN-Tracker\\src\\components\\style.css",
               "RelativeToolTip": "src\\components\\style.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAEUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-03-10T13:08:01.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Table.js",
               "DocumentMoniker": "C:\\Users\\ramon\\Documents\\Applicatie Ontwikkeling\\Mijn Projecten\\Topit\\ASN-Tracker\\src\\components\\Table.js",
               "RelativeDocumentMoniker": "src\\components\\Table.js",
@@ -72,11 +55,12 @@
               "RelativeToolTip": "src\\components\\Table.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-10T13:03:02.329Z"
+              "WhenOpened": "2025-03-10T13:03:02.329Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Graphic.js",
               "DocumentMoniker": "C:\\Users\\ramon\\Documents\\Applicatie Ontwikkeling\\Mijn Projecten\\Topit\\ASN-Tracker\\src\\components\\Graphic.js",
               "RelativeDocumentMoniker": "src\\components\\Graphic.js",
@@ -84,7 +68,8 @@
               "RelativeToolTip": "src\\components\\Graphic.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-10T13:02:35.185Z"
+              "WhenOpened": "2025-03-10T13:02:35.185Z",
+              "EditorCaption": ""
             }
           ]
         }
