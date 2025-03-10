@@ -25,11 +25,11 @@ const Graphic = () => {
 const [data,setData] = useState()
 
   useEffect(()=>{
-
    fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
    .then(res =>res.json())
     .then(data => setData(data))
     },[])
+
 
   const data1 = {
     labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
@@ -59,8 +59,8 @@ const [data,setData] = useState()
     {
       label: 'ASN Mixfonds Zeer Offensief',
       data :[82.1,82.84,82.84,83.66,83.41,83.76,83.76],
-      borderColor: 'rgba(17, 209, 235, 0.69)',
-      backgroundColor: 'rgb(17, 211, 236)',
+      borderColor: 'rgba(44, 190, 209, 0.69)',
+      backgroundColor: 'rgb(44,190,209,0.69)',
       borderWidth: 4,
       pointBorderwidth: 4
     }

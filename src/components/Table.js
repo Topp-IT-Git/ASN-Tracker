@@ -19,29 +19,27 @@ export default function Table(){
   return (
     <div className="p-4">
   <table>
-  <thead>
-    <tbody>
+<thead>
     <tr>
     <th>Koersen</th>
     {Object.keys(data[0].prices).map(price =>
-          (
-          <>
-          <td>{price}</td>
-          </>
+          (<td>{price}</td>
+            
           ))}
     </tr>
-    {data.map(fund => (
-    <tr key={fund.fundId}>
-          <th key={fund.fundId}>{fund.fundName}</th>
-        {Object.values(fund.prices).map(price =>
-          (<td>{price}</td>
-
-          ))}
-         
-    </tr>))}
-  
-    </tbody>
     </thead>
+
+    <tbody>
+    {data.map(fund => (
+    <tr>
+          <th key={fund.fundId}>{fund.fundName.slice(4)}</th>
+        {Object.values(fund.prices).map(price =>(
+          <td>{price}</td>
+          ))}
+    </tr>))}
+    
+    </tbody>
+  
   </table>
   </div>
   )}
@@ -49,14 +47,3 @@ export default function Table(){
 
 
       
-  // {/* {data.map(fund => (
-  //   <tr key={fund.fundId}>
-  //         <tr key={fund.fundId} >{fund.fundName}</tr>
-  //         <td> {Object.values(fund.prices)}</td>
-  //         </tr>
-  //     ))} */}
-  //   {/* {data.map(data =>
-  //       <tr key={data.fundId}>
-  //       <td>{data.fundId}</td>
-  //     <td>{data.fundName}</td>
-  //     </tr>)} */}

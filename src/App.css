@@ -9,8 +9,6 @@ body {
     border-radius:10%;
     
 }
-.bb{background:rgb(191, 191, 79) ;
-}
 
 h2{
     text-align: center;
@@ -35,7 +33,7 @@ th {
     text-align: left;
 }
 
-p{ 
+/* p{ 
     
 margin-left: 10px;
  padding:  5px;
@@ -43,7 +41,7 @@ margin-left: 10px;
  flex-direction: row;
  font-size: 12px;
  
-}
+} */
 
 
 
