@@ -30,7 +30,7 @@ const [data,setData] = useState()
     .then(data => setData(data))
     },[])
 
-
+//hieronder vind je de data voor de aandelen grafiek
   const data1 = {
     labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
     datasets:[
@@ -44,7 +44,7 @@ const [data,setData] = useState()
     }
   ]
   }
-
+// hieronder vind je de grafiek voor de mixfondsen
   const data2 = {
     labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
     datasets:[
@@ -67,6 +67,7 @@ const [data,setData] = useState()
   ]
   }
  const options={}
+ // hieronder is de html hier worden alle functies gerenderd
   return (
     < >
         <h3>Aandelen</h3>
