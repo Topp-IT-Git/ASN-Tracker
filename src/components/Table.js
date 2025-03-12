@@ -23,9 +23,7 @@ export default function Table(){
     <tr>
     <th>Koersen</th>
     {Object.keys(data[0].prices).map(price =>
-          (<td>{price}</td>
-            
-          ))}
+          (<td>{price}</td>))}
     </tr>
     </thead>
 

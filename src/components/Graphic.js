@@ -27,11 +27,11 @@ const [data,setData] = useState()
   useEffect(()=>{
    fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
    .then(res =>res.json())
-    .then(data => setData(data))
+    .then(data => setData(data,console.log(data)))
     },[])
 
 
-  const data1 = {
+  const data1 ={
     labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
     datasets:[
       {
@@ -69,6 +69,7 @@ const [data,setData] = useState()
  const options={}
   return (
     < >
+     <pre>{JSON.stringify(setData,null,2)}</pre>
         <h3>Aandelen</h3>
      <div style={{ width:"600px", height:"300px", marginLeft:"20px"}}>
        
@@ -77,8 +78,10 @@ const [data,setData] = useState()
       <h3>Mixfondsen</h3>
       
         <Line data={data2} options={options}/>
-      
+       
         </div>
+       
+        
     </>
     
   )
