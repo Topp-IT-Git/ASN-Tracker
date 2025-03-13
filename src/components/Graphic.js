@@ -32,10 +32,10 @@ const [data,setData] = useState()
 
 //hieronder vind je de data voor de aandelen grafiek
   const data1 = {
-    labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
+    labels:Object.keys(data[0]['prices']), //["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"]
     datasets:[
       {
-      data :[74,50,78,45,80,6],
+      data :Object.values(data[0]['prices']),//[74,50,78,45,80,6]
       label: 'ASN Duurzaam Aandelenfonds',
       borderColor: 'rgb(209, 34, 139)',
       backgroundColor: 'rgb(209,34,139)',
@@ -46,11 +46,11 @@ const [data,setData] = useState()
   }
 // hieronder vind je de grafiek voor de mixfondsen
   const data2 = {
-    labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
+    labels:Object.keys(data[1]['prices']),//["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"]
     datasets:[
       {
         label:  ' ASN Mixfonds Offensief',
-      data :[74,50,78,45,80,6],
+      data :Object.values(data[1]['prices']),//[74,50,78,45,80,6]
       borderColor: 'rgb(209, 34, 139)',
       backgroundColor: 'rgb(209,34,139)',
       borderWidth: 3,
@@ -58,7 +58,7 @@ const [data,setData] = useState()
     },
     {
       label: 'ASN Mixfonds Zeer Offensief',
-      data :[82.1,82.84,82.84,83.66,83.41,83.76,83.76],
+      data :Object.values(data[2]['prices']),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76]
       borderColor: 'rgba(44, 190, 209, 0.69)',
       backgroundColor: 'rgb(44,190,209,0.69)',
       borderWidth: 4,
@@ -86,3 +86,4 @@ const [data,setData] = useState()
 }
 
 export default Graphic
+// DIT CODE IS SECHT EN PEOPIE EN JE WET NEIT HOE JE CODERD
