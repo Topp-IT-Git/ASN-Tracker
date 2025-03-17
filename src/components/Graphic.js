@@ -54,7 +54,7 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
     datasets:[
       {
         label:  ' ASN Mixfonds Offensief',
-<<<<<<< HEAD
+//<<<<<<< HEAD
       data :[74,50,78,45,80,6],
 
 
@@ -62,17 +62,17 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
       backgroundColor: '#fada87',
 
 
-=======
+//=======
       data :Object.values(data[1]['prices']),//[74,50,78,45,80,6],//
       borderColor: 'rgb(209, 34, 139)',
       backgroundColor: 'rgb(209,34,139)',
->>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
+//>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       borderWidth: 3,
       pointBorderwidth: 4
     },
     {
       label: 'ASN Mixfonds Zeer Offensief',
-<<<<<<< HEAD
+//<<<<<<< HEAD
       data :[82.1,82.84,82.84,83.66,83.41,83.76,83.76],
 
 
@@ -80,11 +80,11 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
       backgroundColor: '#ee6952',
 
 
-=======
+//=======
       data :Object.values(data[2]['prices']),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
       borderColor: 'rgba(44, 190, 209, 0.69)',
       backgroundColor: 'rgb(44,190,209,0.69)',
->>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
+//>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       borderWidth: 4,
       pointBorderwidth: 4
     }
