@@ -22,20 +22,20 @@ ChartJS.register(
   Title          // Allows adding a title to the chart
 )
 const Graphic = () => {
-const [data,setData] = useState()
+const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}},{"prices":{"basis":30}}])
 
   useEffect(()=>{
    fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
    .then(res =>res.json())
     .then(data => setData(data))
     },[])
-
-
+  console.log(data)
+//hieronder vind je de data voor de aandelen grafiek
   const data1 = {
-    labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
+    labels:Object.keys(data[0]['prices']), //["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],//
     datasets:[
       {
-      data :[74,50,78,45,80,6],
+      data :Object.values(data[0]['prices']),//[74,50,78,45,80,6],//
       label: 'ASN Duurzaam Aandelenfonds',
 
 
@@ -48,12 +48,13 @@ const [data,setData] = useState()
     }
   ]
   }
-
+// hieronder vind je de grafiek voor de mixfondsen
   const data2 = {
-    labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
+    labels:Object.keys(data[1]['prices']),//["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
     datasets:[
       {
         label:  ' ASN Mixfonds Offensief',
+<<<<<<< HEAD
       data :[74,50,78,45,80,6],
 
 
@@ -61,11 +62,17 @@ const [data,setData] = useState()
       backgroundColor: '#fada87',
 
 
+=======
+      data :Object.values(data[1]['prices']),//[74,50,78,45,80,6],//
+      borderColor: 'rgb(209, 34, 139)',
+      backgroundColor: 'rgb(209,34,139)',
+>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       borderWidth: 3,
       pointBorderwidth: 4
     },
     {
       label: 'ASN Mixfonds Zeer Offensief',
+<<<<<<< HEAD
       data :[82.1,82.84,82.84,83.66,83.41,83.76,83.76],
 
 
@@ -73,12 +80,18 @@ const [data,setData] = useState()
       backgroundColor: '#ee6952',
 
 
+=======
+      data :Object.values(data[2]['prices']),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
+      borderColor: 'rgba(44, 190, 209, 0.69)',
+      backgroundColor: 'rgb(44,190,209,0.69)',
+>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       borderWidth: 4,
       pointBorderwidth: 4
     }
   ]
   }
  const options={}
+ // hieronder is de html hier worden alle functies gerenderd
   return (
     < >
         <h3>Aandelen</h3>
@@ -98,3 +111,4 @@ const [data,setData] = useState()
 }
 
 export default Graphic
+// DIT CODE IS SECHT EN PEOPIE EN JE WET NEIT HOE JE CODERD
