@@ -64,8 +64,7 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
 
 //=======
       data :Object.values(data[1]['prices']),//[74,50,78,45,80,6],//
-      borderColor: 'rgb(209, 34, 139)',
-      backgroundColor: 'rgb(209,34,139)',
+ 
 //>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       borderWidth: 3,
       pointBorderwidth: 4
@@ -82,8 +81,7 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
 
 //=======
       data :Object.values(data[2]['prices']),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
-      borderColor: 'rgba(44, 190, 209, 0.69)',
-      backgroundColor: 'rgb(44,190,209,0.69)',
+
 //>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       borderWidth: 4,
       pointBorderwidth: 4
