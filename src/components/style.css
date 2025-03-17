@@ -11,23 +11,22 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f9;
+    background-color: #f7e7d0;
+
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
 }
 
-h2 {
-    text-align: center;
-}
+
 
 #fundPriceChart {
     width: 100%;
@@ -45,6 +44,9 @@ table {
     width: 100%;
     border-collapse: collapse;
 
+
+    
+
 }
 
 th, td {
@@ -52,26 +54,44 @@ th, td {
     padding: 12px;
     text-align: center;
 
+
 }
 
 th {
-    background-color: hotpink;
+    background-color: #fada87;
     font-weight: bold;
+
 }
+
+
 td {
     padding: 40px;
+    background-color: white;    
+  
 }
 
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-tr:hover {
-    background-color: pink;
-}
 
 
 .datums {
     font-weight: bold;
-    background-color: hotpink;
+    background-color: #f56f44;
+
+}
+table, th, td {
+    border: black;
+}
+
+.grafiek {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 10px;
+
+
+
+
 }

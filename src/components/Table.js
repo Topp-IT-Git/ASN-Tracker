@@ -19,7 +19,7 @@ export default function Table(){
 
   return (
     <div className="p-4">
-  <table>
+  <table id="tabel">
 <thead>
     <tr>
     <th>Koersen</th>
