@@ -37,8 +37,12 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
       {
       data :Object.values(data[0]['prices']),//[74,50,78,45,80,6],//
       label: 'ASN Duurzaam Aandelenfonds',
-      borderColor: 'rgb(209, 34, 139)',
-      backgroundColor: 'rgb(209,34,139)',
+
+
+      borderColor: '#41775e',
+      backgroundColor: '#41775e',
+
+
       borderWidth: 3,
       pointBorderwidth: 4
     }
@@ -50,17 +54,37 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
     datasets:[
       {
         label:  ' ASN Mixfonds Offensief',
+<<<<<<< HEAD
+      data :[74,50,78,45,80,6],
+
+
+      borderColor: '#fada87',
+      backgroundColor: '#fada87',
+
+
+=======
       data :Object.values(data[1]['prices']),//[74,50,78,45,80,6],//
       borderColor: 'rgb(209, 34, 139)',
       backgroundColor: 'rgb(209,34,139)',
+>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       borderWidth: 3,
       pointBorderwidth: 4
     },
     {
       label: 'ASN Mixfonds Zeer Offensief',
+<<<<<<< HEAD
+      data :[82.1,82.84,82.84,83.66,83.41,83.76,83.76],
+
+
+      borderColor: '#ee6952',
+      backgroundColor: '#ee6952',
+
+
+=======
       data :Object.values(data[2]['prices']),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
       borderColor: 'rgba(44, 190, 209, 0.69)',
       backgroundColor: 'rgb(44,190,209,0.69)',
+>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       borderWidth: 4,
       pointBorderwidth: 4
     }
@@ -71,13 +95,14 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
   return (
     < >
         <h3>Aandelen</h3>
-     <div style={{ width:"600px", height:"300px", marginLeft:"20px"}}>
-       
-        <Line data={data1} options={options}/>
+     <div style={{ width:"600px", height:"300px"}}>
+
+              <Line class="grafiek" data={ data1 } options={ options } />
+
 
       <h3>Mixfondsen</h3>
       
-        <Line data={data2} options={options}/>
+        <Line class="grafiek" data={data2} options={options}/>
       
         </div>
     </>
