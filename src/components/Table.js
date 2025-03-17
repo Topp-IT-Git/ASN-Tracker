@@ -32,7 +32,7 @@ export default function Table(){
     </thead>
 
     <tbody>
-    {/*Hieronder worden de namen van de bedrijven van de aandelen in de kopje verwerkt en dan de koers */}
+     {/*Hieronder worden de namen van de bedrijven van de aandelen in de kopje verwerkt en dan de koers */}
     {data.map(fund => (
     <tr>
             <th key={fund.fundId}>{fund.fundName.slice(4)}</th>
