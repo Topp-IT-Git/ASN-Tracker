@@ -22,69 +22,71 @@ ChartJS.register(
   Title          // Allows adding a title to the chart
 )
 const Graphic = () => {
-const [data,setData] = useState()
+  const [data,setData] = useState([]);
+  
+    useEffect(()=>{
+     fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
+     .then(res =>res.json())
+      .then(data => setData(data))
+      .catch(err => console.error(err))
+      },[])
+// display only the first 10 prices for now
+if (!data.length) return <p>Loading...</p>;
 
-  useEffect(()=>{
-   fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
-   .then(res =>res.json())
-    .then(data => setData(data,console.log(data)))
-    },[])
-
-
-  const data1 ={
-    labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
-    datasets:[
-      {
-      data :[74,50,78,45,80,6],
-      label: 'ASN Duurzaam Aandelenfonds',
-      borderColor: 'rgb(209, 34, 139)',
-      backgroundColor: 'rgb(209,34,139)',
-      borderWidth: 3,
-      pointBorderwidth: 4
+    const data1 ={
+      labels:Object.keys(data[0]['prices']), 
+      datasets:[
+        {
+        data :Object.values(data[0]['prices']),
+        label: 'ASN Duurzaam Aandelenfonds',
+        borderColor: 'rgb(209, 34, 139)',
+        backgroundColor: 'rgb(209,34,139)',
+        borderWidth: 3,
+        pointBorderwidth: 4
+      }
+    ]
     }
-  ]
-  }
-
-  const data2 = {
-    labels:["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
-    datasets:[
+  
+    const data2 = {
+      labels:Object.keys(data[1]['prices']),
+      datasets:[
+        {
+          label: ' ASN Mixfonds Offensief',
+        data :Object.values(data[0]['prices']),
+        borderColor: 'rgb(209, 34, 139)',
+        backgroundColor: 'rgb(209,34,139)',
+        borderWidth: 3,
+        pointBorderwidth: 4
+      },
       {
-        label:  ' ASN Mixfonds Offensief',
-      data :[74,50,78,45,80,6],
-      borderColor: 'rgb(209, 34, 139)',
-      backgroundColor: 'rgb(209,34,139)',
-      borderWidth: 3,
-      pointBorderwidth: 4
-    },
-    {
-      label: 'ASN Mixfonds Zeer Offensief',
-      data :[82.1,82.84,82.84,83.66,83.41,83.76,83.76],
-      borderColor: 'rgba(44, 190, 209, 0.69)',
-      backgroundColor: 'rgb(44,190,209,0.69)',
-      borderWidth: 4,
-      pointBorderwidth: 4
+        label: 'ASN Mixfonds Zeer Offensief',
+        data :Object.values(data[2]['prices']),
+        borderColor: 'rgba(44, 190, 209, 0.69)',
+        backgroundColor: 'rgb(44,190,209,0.69)',
+        borderWidth: 4,
+        pointBorderwidth: 4
+      }
+    ]
     }
-  ]
-  }
- const options={}
-  return (
-    < >
-     <pre>{JSON.stringify(setData,null,2)}</pre>
-        <h3>Aandelen</h3>
-     <div style={{ width:"600px", height:"300px", marginLeft:"20px"}}>
-       
-        <Line data={data1} options={options}/>
-
-      <h3>Mixfondsen</h3>
+   const options={}
+    return (
+      < >
       
-        <Line data={data2} options={options}/>
-       
-        </div>
-       
+          <h3>Aandelen</h3>
+       <div style={{ width:"600px", height:"300px", marginLeft:"20px"}}>
+         
+          <Line data={data1} options={options}/>
+  
+        <h3>Mixfondsen</h3>
         
-    </>
-    
-  )
-}
-
-export default Graphic
+          <Line data={data2} options={options}/>
+         
+          </div>
+         
+          
+      </>
+      
+    )
+  }
+  
+  export default Graphic
