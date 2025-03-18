@@ -80,7 +80,6 @@ if (!data.length) return <p>Loading...</p>;
         <h3>Mixfondsen</h3>
         
           <Line data={data2} options={options}/>
-         
           </div>
          
           
