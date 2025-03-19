@@ -29,7 +29,9 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
    .then(res =>res.json())
     .then(data => setData(data))
     },[])
-  console.log(data)
+    console.log(Object.values(data[2]['prices']))
+    const testPriceValues = Object.values(data[2]['prices'])
+    
 //hieronder vind je de data voor de aandelen grafiek
   const data1 = {
     labels:Object.keys(data[0]['prices']), //["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],//
@@ -84,7 +86,7 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
 
 //=======
       data :Object.values(data[2]['prices']),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
-
+    
 //>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       //Dit is voor lijndikte voor ASN Mixfonds Zeer Offensief
       borderWidth: 4,
@@ -92,6 +94,32 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
     }
   ]
   }
+  const testData = {
+    labels: ["1","2","3"],
+    datasets:[
+      {
+      data :Object.values(data[0]['prices']),//[74,50,78,45,80,6],//
+      label: 'ASN Duurzaam Aandelenfonds',
+
+      //Dit is voor de lijnkleur voor ASN Duurzaam aandelenfonds
+      //Dit is voor de lijn
+      borderColor: '#41775e',
+      //Dit is voor de stippen
+      backgroundColor:'#d42626',/* function(){
+        for ((let i = 1; i < this.data.length); i += 1) {
+          const rendement = this.data[i] - this.data[i - 1]
+          if (rendement < 0) {
+            return "#ed0909"
+          } else {
+            return "#09ed18"
+          }},*/
+
+      //Dit is voor lijndikte voor ASN Duurzaam aandelenfonds
+      borderWidth: 1,
+      pointBorderwidth: 2
+    }]
+  }
+
  const options={}
  // hieronder is de html hier worden alle functies gerenderd
   return (
@@ -106,6 +134,10 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
       
         <Line class="grafiek" data={data2} options={options}/>
       
+
+      <h1>test grafiek</h1>
+
+        {/*<Line class="grafiek" data={testData} options={options}/>*/}
         </div>
     </>
     
