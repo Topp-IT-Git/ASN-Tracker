@@ -38,13 +38,15 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
       data :Object.values(data[0]['prices']),//[74,50,78,45,80,6],//
       label: 'ASN Duurzaam Aandelenfonds',
 
-
+      //Dit is voor de lijnkleur voor ASN Duurzaam aandelenfonds
+      //Dit is voor de lijn
       borderColor: '#41775e',
-      backgroundColor: '#41775e',
+      //Dit is voor de stippen
+      backgroundColor: '#d42626',
 
-
-      borderWidth: 3,
-      pointBorderwidth: 4
+      //Dit is voor lijndikte voor ASN Duurzaam aandelenfonds
+      borderWidth: 1,
+      pointBorderwidth: 10
     }
   ]
   }
@@ -55,9 +57,9 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
       {
         label:  ' ASN Mixfonds Offensief',
 //<<<<<<< HEAD
-      data :[74,50,78,45,80,6],
+      data :[74],
 
-
+      //Dit is voor de lijnkleur voor ASN Mixfonds Offensief
       borderColor: '#fada87',
       backgroundColor: '#fada87',
 
@@ -66,15 +68,16 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
       data :Object.values(data[1]['prices']),//[74,50,78,45,80,6],//
  
 //>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
+      //Dit is voor lijndikte voor ASN Mixfonds Offensief
       borderWidth: 3,
       pointBorderwidth: 4
     },
     {
       label: 'ASN Mixfonds Zeer Offensief',
 //<<<<<<< HEAD
-      data :[82.1,82.84,82.84,83.66,83.41,83.76,83.76],
+      data :[82.1,82.84,82.84,83.66,83.41,83.76,83.76,56,34,76,34,45],
 
-
+      //Dit is voor lijnkleur voor ASN Mixfonds Zeer Offensief
       borderColor: '#ee6952',
       backgroundColor: '#ee6952',
 
@@ -83,6 +86,7 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
       data :Object.values(data[2]['prices']),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
 
 //>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
+      //Dit is voor lijndikte voor ASN Mixfonds Zeer Offensief
       borderWidth: 4,
       pointBorderwidth: 4
     }
@@ -109,4 +113,4 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
 }
 
 export default Graphic
-// DIT CODE IS SECHT EN PEOPIE EN JE WET NEIT HOE JE CODERD
+
