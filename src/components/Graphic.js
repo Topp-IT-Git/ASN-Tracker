@@ -29,7 +29,7 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
    .then(res =>res.json())
     .then(data => setData(data))
     },[])
-    console.log(Object.values(data[2]['prices']))
+
     const testPriceValues = Object.values(data[2]['prices'])
     
 //hieronder vind je de data voor de aandelen grafiek

@@ -37,7 +37,7 @@ export default function Table(){
     <tr>
             <th key={fund.fundId}>{fund.fundName.slice(4)}</th>
         {Object.values(fund.prices).map(price =>(
-          <td>{price}</td>
+          <td class = "textkleurTabel">{price}</td>
           ))}
     </tr>))}
     
