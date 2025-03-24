@@ -1,0 +1,97 @@
+/* latin */
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 100 700;
+    font-display: swap;
+
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7e7d0;
+
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+
+#fundPriceChart {
+    width: 100%;
+    height: 400px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+
+    
+
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+
+
+}
+
+th {
+    background-color: #fada87;
+    font-weight: bold;
+
+}
+
+
+td {
+    padding: 40px;
+    background-color: white;    
+  
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+
+.datums {
+    font-weight: bold;
+    background-color: #ffa587;
+
+}
+table, th, td {
+    border: black;
+}
+
+.grafiek {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 10px;
+
+
+
+
+}

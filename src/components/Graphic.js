@@ -21,7 +21,7 @@ ChartJS.register(
   Legend,        // Enables the chart legend
   Title          // Allows adding a title to the chart
 )
-onst Graphic = () => {
+const Graphic = () => {
   const [data,setData] = useState([]);
   
     useEffect(()=>{
@@ -39,8 +39,8 @@ if (!data.length) return <p>Loading...</p>;
         {
         data :Object.values(data[0]['prices']), // Extracts corresponding prices
         label: 'ASN Duurzaam Aandelenfonds',
-        borderColor: 'rgb(209, 34, 139)',
-        backgroundColor: 'rgb(209,34,139)',
+        borderColor: '#41775e',
+        backgroundColor: '#41775e',
         borderWidth: 3,
         pointBorderwidth: 4
       }
@@ -53,16 +53,16 @@ if (!data.length) return <p>Loading...</p>;
         {
           label: ' ASN Mixfonds Offensief',
         data :Object.values(data[1]['prices']), // Extracts dates from second fund
-        borderColor: 'rgb(209, 34, 139)',
-        backgroundColor: 'rgb(209,34,139)',
+        borderColor: '#fada87',
+        backgroundColor: '#fada87',
         borderWidth: 3,
         pointBorderwidth: 4
       },
       {
         label: 'ASN Mixfonds Zeer Offensief',
         data :Object.values(data[2]['prices']), //Extracts prices from third fund
-        borderColor: 'rgba(44, 190, 209, 0.69)',
-        backgroundColor: 'rgb(44,190,209,0.69)',
+        borderColor: '#ee6952',
+        backgroundColor: '#ee6952',
         borderWidth: 4,
         pointBorderwidth: 4
       }
@@ -73,13 +73,13 @@ if (!data.length) return <p>Loading...</p>;
       < >
       
           <h3>Aandelen</h3>
-       <div style={{ width:"600px", height:"300px", marginLeft:"20px"}}>
+       <div style={{ width:"600px", height:"300px"}}>
          
-          <Line data={data1} />
+          <Line class="grafiek" data={data1} />
   
         <h3>Mixfondsen</h3>
         
-          <Line data={data2} />
+          <Line class="grafiek" data={data2} />
           </div>
          
           
