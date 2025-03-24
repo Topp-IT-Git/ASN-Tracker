@@ -23,7 +23,7 @@ ChartJS.register(
 )
 const Graphic = () => {
   const [data,setData] = useState([]);
-  
+  a
     useEffect(()=>{
      fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
      .then(res =>res.json())
