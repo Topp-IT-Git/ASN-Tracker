@@ -21,9 +21,9 @@ ChartJS.register(
   Legend,        // Enables the chart legend
   Title          // Allows adding a title to the chart
 )
-const Graphic = () => {
+onst Graphic = () => {
   const [data,setData] = useState([]);
-  a
+  
     useEffect(()=>{
      fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
      .then(res =>res.json())
@@ -34,10 +34,10 @@ const Graphic = () => {
 if (!data.length) return <p>Loading...</p>;
 
     const data1 ={
-      labels:Object.keys(data[0]['prices']), 
+      labels:Object.keys(data[0]['prices']), // Extracts dates
       datasets:[
         {
-        data :Object.values(data[0]['prices']),
+        data :Object.values(data[0]['prices']), // Extracts corresponding prices
         label: 'ASN Duurzaam Aandelenfonds',
         borderColor: 'rgb(209, 34, 139)',
         backgroundColor: 'rgb(209,34,139)',
@@ -52,7 +52,7 @@ if (!data.length) return <p>Loading...</p>;
       datasets:[
         {
           label: ' ASN Mixfonds Offensief',
-        data :Object.values(data[0]['prices']),
+        data :Object.values(data[1]['prices']), // Extracts dates from second fund
         borderColor: 'rgb(209, 34, 139)',
         backgroundColor: 'rgb(209,34,139)',
         borderWidth: 3,
@@ -60,7 +60,7 @@ if (!data.length) return <p>Loading...</p>;
       },
       {
         label: 'ASN Mixfonds Zeer Offensief',
-        data :Object.values(data[2]['prices']),
+        data :Object.values(data[2]['prices']), //Extracts prices from third fund
         borderColor: 'rgba(44, 190, 209, 0.69)',
         backgroundColor: 'rgb(44,190,209,0.69)',
         borderWidth: 4,
@@ -68,19 +68,18 @@ if (!data.length) return <p>Loading...</p>;
       }
     ]
     }
-   const options={}
+
     return (
       < >
       
           <h3>Aandelen</h3>
        <div style={{ width:"600px", height:"300px", marginLeft:"20px"}}>
          
-          <Line data={data1} options={options}/>
+          <Line data={data1} />
   
         <h3>Mixfondsen</h3>
         
-          <Line data={data2} options={options}/>
-         
+          <Line data={data2} />
           </div>
          
           
