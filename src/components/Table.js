@@ -1,7 +1,7 @@
 import './style.css';
 import React from 'react'
 import { useState,useEffect } from 'react'
-import TableKleur from './TableKleur.js'
+import {TableKleur,ResetKleur} from './TableKleur.js'
 export default function Table(){
   const [data,setData]=useState([]);
 
@@ -36,14 +36,15 @@ export default function Table(){
      {/*Hieronder worden de namen van de bedrijven van de aandelen in de kopje verwerkt en dan de koers */}
     {data.map(fund => (
     <tr>
+      <ResetKleur reset = {1}/>
+    
             <th key={fund.fundId}>{fund.fundName.slice(4)}</th>
         {Object.values(fund.prices).map(price =>(
-          <div>
-          <td class = "textkleurTabel">
+          <>
+          <td>
           <TableKleur price = {price}/>
-            {price}
             </td>
-          </div>
+          </>
           
           
           ))}

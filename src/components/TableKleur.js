@@ -1,20 +1,30 @@
 import './style.css';
 import React from 'react'
 
-const priceArray = [0]
+
+const priceArray = []
+
+const ResetKleur = (reset) => {
+    let beginArray = 0
+    beginArray = Object.values(reset)
+    if (beginArray > 0) {
+        priceArray.length = 0
+        beginArray = 0
+    }
+    return (
+        <></>
+    )
+}
 
 const TableKleur = (price) => {
     priceArray.push(price["price"])
-    const rendement = (priceArray[priceArray.length-2] - priceArray[priceArray.length-4]).toFixed(2)
-    const tijdelijk = price
-    console.log(rendement)
-    console.log(price)
     console.log(priceArray)
+    const rendement = (priceArray[priceArray.length-1] - priceArray[priceArray.length-3]).toFixed(2)
     return (
         <div style={{backgroundColor: rendement > 0 ? 'green' : rendement < 0 ? 'red' : 'white'}}>
-            <p>{rendement}</p>
+            <p>{Object.values(price)}</p>
         </div>
     )
 }
 
-export default TableKleur
+export {TableKleur,ResetKleur} 
