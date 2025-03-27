@@ -36,7 +36,7 @@ export default function Table(){
      {/*Hieronder worden de namen van de bedrijven van de aandelen in de kopje verwerkt en dan de koers */}
     {data.map(fund => (
     <tr>
-      <ResetKleur reset = {1}/>
+      <ResetKleur arrayToZero = {1} fund = {fund}/>
     
             <th key={fund.fundId}>{fund.fundName.slice(4)}</th>
         {Object.values(fund.prices).map(price =>(
