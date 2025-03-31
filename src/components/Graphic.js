@@ -24,7 +24,12 @@ ChartJS.register(
 const Graphic = () => {
 const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}},{"prices":{"basis":30}}])
 
-  useEffect(()=>{
+  console.log([5,4,3,2,1].reverse())
+
+//data.map(aandeel => console.log(aandeel["prices"]))
+  
+
+useEffect(()=>{
    fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
    .then(res =>res.json())
     .then(data => setData(data))
@@ -34,10 +39,10 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
     
 //hieronder vind je de data voor de aandelen grafiek
   const data1 = {
-    labels:Object.keys(data[0]['prices']), //["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],//
+    labels:Object.keys(data[0]['prices']).reverse(), //["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],//
     datasets:[
       {
-      data :Object.values(data[0]['prices']),//[74,50,78,45,80,6],//
+      data :Object.values(data[0]['prices']).reverse(),//[74,50,78,45,80,6],//
       label: 'ASN Duurzaam Aandelenfonds',
 
       //Dit is voor de lijnkleur voor ASN Duurzaam aandelenfonds
@@ -54,7 +59,7 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
   }
 // hieronder vind je de grafiek voor de mixfondsen
   const data2 = {
-    labels:Object.keys(data[1]['prices']),//["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
+    labels:Object.keys(data[1]['prices']).reverse(),//["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
     datasets:[
       {
         label:  ' ASN Mixfonds Offensief',
@@ -66,7 +71,7 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
 
 
 //=======
-      data :Object.values(data[1]['prices']),//[74,50,78,45,80,6],//
+      data :Object.values(data[1]['prices']).reverse(),//[74,50,78,45,80,6],//
  
 //>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       //Dit is voor lijndikte voor ASN Mixfonds Offensief
@@ -83,7 +88,7 @@ const [data,setData] = useState([{"prices":{"basis":10}},{"prices":{"basis":20}}
 
 
 //=======
-      data :Object.values(data[2]['prices']),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
+      data :Object.values(data[2]['prices']).reverse(),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
     
 //>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       //Dit is voor lijndikte voor ASN Mixfonds Zeer Offensief
