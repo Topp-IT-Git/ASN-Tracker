@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ASN-Tracker/static/css/main.020f0256.css",
+    "main.js": "/ASN-Tracker/static/js/main.ac825e23.js",
+    "index.html": "/ASN-Tracker/index.html",
+    "main.020f0256.css.map": "/ASN-Tracker/static/css/main.020f0256.css.map",
+    "main.ac825e23.js.map": "/ASN-Tracker/static/js/main.ac825e23.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.020f0256.css",
+    "static/js/main.ac825e23.js"
+  ]
+}
