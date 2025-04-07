@@ -22,70 +22,91 @@ ChartJS.register(
   Title          // Allows adding a title to the chart
 )
 const Graphic = () => {
-  const [data,setData] = useState([]);
-  
-    useEffect(()=>{
-     fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
-     .then(res =>res.json())
-      .then(data => setData(data))
-      .catch(err => console.error(err))
-      },[])
-// display only the first 10 prices for now
+const [data,setData] = useState([]);
+
+  useEffect(()=>{
+   fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
+   .then(res =>res.json())
+    .then(data => setData(data))
+    .catch(err => console.error(err))
+    },[])
+    // display only the first 10 prices for now
 if (!data.length) return <p>Loading...</p>;
 
-    const data1 ={
-      labels:Object.keys(data[0]['prices']), // Extracts dates
-      datasets:[
-        {
-        data :Object.values(data[0]['prices']), // Extracts corresponding prices
-        label: 'ASN Duurzaam Aandelenfonds',
-        borderColor: '#41775e',
-        backgroundColor: '#41775e',
-        borderWidth: 3,
-        pointBorderwidth: 4
-      }
-    ]
-    }
-  
-    const data2 = {
-      labels:Object.keys(data[1]['prices']),
-      datasets:[
-        {
-          label: ' ASN Mixfonds Offensief',
-        data :Object.values(data[1]['prices']), // Extracts dates from second fund
-        borderColor: '#fada87',
-        backgroundColor: '#fada87',
-        borderWidth: 3,
-        pointBorderwidth: 4
-      },
+//hieronder vind je de data voor de aandelen grafiek
+  const data1 = {
+    labels:Object.keys(data[0]['prices']).reverse(), //["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],//
+    datasets:[
       {
-        label: 'ASN Mixfonds Zeer Offensief',
-        data :Object.values(data[2]['prices']), //Extracts prices from third fund
-        borderColor: '#ee6952',
-        backgroundColor: '#ee6952',
-        borderWidth: 4,
-        pointBorderwidth: 4
-      }
-    ]
-    }
+      data :Object.values(data[0]['prices']).reverse(),//[74,50,78,45,80,6],//
+      label: 'ASN Duurzaam Aandelenfonds',
 
-    return (
-      < >
-      
-          <h3>Aandelen</h3>
-       <div style={{ width:"600px", height:"300px"}}>
-         
-          <Line className="grafiek" data={data1} />
-  </div>
-        <h3>Mixfondsen</h3>
-        <div style={{ width:"600px", height:"300px"}}>
-          <Line className="grafiek" data={data2} />
-          </div>
-         
-          
-      </>
-      
-    )
+
+      borderColor: '#41775e',
+      backgroundColor: '#41775e',
+
+
+      borderWidth: 3,
+      pointBorderwidth: 4
+    }
+  ]
   }
-  
-  export default Graphic
+// hieronder vind je de grafiek voor de mixfondsen
+  const data2 = {
+    labels:Object.keys(data[1]['prices']).reverse(),//["feb 22", "feb 23", "feb 24", "feb 25", "feb 26"],
+    datasets:[
+      {
+        label:  ' ASN Mixfonds Offensief',
+
+
+      borderColor: '#fada87',
+      backgroundColor: '#fada87',
+
+
+//=======
+      data :Object.values(data[1]['prices']).reverse(),//[74,50,78,45,80,6],//
+ 
+//>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
+      borderWidth: 3,
+      pointBorderwidth: 4
+    },
+    {
+      label: 'ASN Mixfonds Zeer Offensief',
+//<<<<<<< HEAD
+
+
+      borderColor: '#ee6952',
+      backgroundColor: '#ee6952',
+
+
+//=======
+      data :Object.values(data[2]['prices']).reverse(),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
+
+//>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
+      borderWidth: 4,
+      pointBorderwidth: 4
+    }
+  ]
+  }
+ const options={}
+ // hieronder is de html hier worden alle functies gerenderd
+  return (
+    < >
+        <h3>Aandelen</h3>
+     <div style={{ width:"600px", height:"300px"}}>
+
+              <Line class="grafiek" data={ data1 } options={ options } />
+
+
+      <h3>Mixfondsen</h3>
+      
+        <Line class="grafiek" data={data2} options={options}/>
+      
+        </div>
+    </>
+    
+  )
+}
+
+export default Graphic
+// DIT CODE IS SECHT EN PEOPIE EN JE WET NEIT HOE JE CODERD

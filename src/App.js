@@ -1,7 +1,8 @@
 import Table from './components/Table';
 import './App.css';
 import Graphic from './components/Graphic';
-import Header from './components/Header';
+
+
 function App() {
  // Event handler for hovering over the paragraph
 
@@ -11,7 +12,7 @@ function App() {
       <Header/>
        <Table/>
        <Graphic/>
-       
+
   
     </div>
   );
