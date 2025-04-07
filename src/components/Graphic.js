@@ -23,7 +23,7 @@ ChartJS.register(
 )
 const Graphic = () => {
 const [data,setData] = useState([]);
-
+localStorage.clear()
   useEffect(()=>{
    fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
    .then(res =>res.json())
@@ -109,4 +109,4 @@ if (!data.length) return <p>Loading...</p>;
 }
 
 export default Graphic
-// DIT CODE IS SECHT EN PEOPIE EN JE WET NEIT HOE JE CODERD
+
