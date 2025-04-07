@@ -53,26 +53,16 @@ if (!data.length) return <p>Loading...</p>;
         {
           label: ' ASN Mixfonds Offensief',
         data :Object.values(data[1]['prices']), // Extracts dates from second fund
-<<<<<<< HEAD
-        borderColor: 'rgb(209, 34, 139)',
-        backgroundColor: 'rgb(209,34,139)',
-=======
         borderColor: '#fada87',
         backgroundColor: '#fada87',
->>>>>>> 096355badc487a23accaf3477247d347f1b6165c
         borderWidth: 3,
         pointBorderwidth: 4
       },
       {
         label: 'ASN Mixfonds Zeer Offensief',
         data :Object.values(data[2]['prices']), //Extracts prices from third fund
-<<<<<<< HEAD
-        borderColor: 'rgba(44, 190, 209, 0.69)',
-        backgroundColor: 'rgb(44,190,209,0.69)',
-=======
         borderColor: '#ee6952',
         backgroundColor: '#ee6952',
->>>>>>> 096355badc487a23accaf3477247d347f1b6165c
         borderWidth: 4,
         pointBorderwidth: 4
       }
@@ -85,19 +75,11 @@ if (!data.length) return <p>Loading...</p>;
           <h3>Aandelen</h3>
        <div style={{ width:"600px", height:"300px"}}>
          
-<<<<<<< HEAD
-          <Line data={data1} />
-  
+          <Line className="grafiek" data={data1} />
+  </div>
         <h3>Mixfondsen</h3>
-        
-          <Line data={data2} />
-=======
-          <Line class="grafiek" data={data1} />
-  
-        <h3>Mixfondsen</h3>
-        
-          <Line class="grafiek" data={data2} />
->>>>>>> 096355badc487a23accaf3477247d347f1b6165c
+        <div style={{ width:"600px", height:"300px"}}>
+          <Line className="grafiek" data={data2} />
           </div>
          
           

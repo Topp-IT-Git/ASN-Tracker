@@ -1,14 +1,14 @@
 import Table from './components/Table';
 import './App.css';
 import Graphic from './components/Graphic';
-
+import Header from './components/Header';
 function App() {
  // Event handler for hovering over the paragraph
 
   return (
     <div className="App">
       
-      <h2>Koersen ASN Beleggingsfondsen</h2>
+      <Header/>
        <Table/>
        <Graphic/>
        
