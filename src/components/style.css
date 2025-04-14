@@ -74,8 +74,6 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-
-
 .datums {
     font-weight: bold;
     background-color: #ffa587;
@@ -83,6 +81,8 @@ tr:nth-child(even) {
 }
 table, th, td {
     border: black;
+    margin-top:6rem;
+ 
 }
 
 .grafiek {
@@ -90,8 +90,4 @@ table, th, td {
     border: 1px solid;
     border-radius: 3px;
     padding: 10px;
-
-
-
-
 }

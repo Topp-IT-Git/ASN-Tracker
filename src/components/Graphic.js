@@ -84,23 +84,21 @@ if (!data.length) return <p>Loading...</p>;
 
 //>>>>>>> 45103fc6eaa8c7d1e38d2830971369899a1a83b8
       borderWidth: 4,
-      pointBorderwidth: 4
-    }
+      pointBorderwidth: 4,}
+    
   ]
   }
- const options={}
+ 
  // hieronder is de html hier worden alle functies gerenderd
   return (
     < >
         <h3>Aandelen</h3>
      <div style={{ width:"600px", height:"300px"}}>
 
-              <Line class="grafiek" data={ data1 } options={ options } />
-
-
+      <Line class="grafiek" data={ data1 } />
       <h3>Mixfondsen</h3>
       
-        <Line class="grafiek" data={data2} options={options}/>
+      <Line class="grafiek" data={data2}/>
       
         </div>
     </>

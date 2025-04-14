@@ -1,10 +1,12 @@
 *{
     margin: 0;
+  
 }
 
 
 body {
-    width: 500px;
+    
+ 
     margin-left: 50px;
     border: 1px grey;
     border-radius: 10%;

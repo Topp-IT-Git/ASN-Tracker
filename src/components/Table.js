@@ -7,7 +7,6 @@ export default function Table(){
 
 
   useEffect(()=>{
-
    fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
    .then(res =>res.json())
     .then(data => setData(data))
