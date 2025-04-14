@@ -6,14 +6,25 @@
 body {
     width: 500px;
     margin-left: 50px;
-    border: 1px grey;
+ 
     border-radius: 10%;
-    padding-bottom: 380px;
+    padding-bottom: 1%;
     display: flex;
+    width: 500px;
+    margin: 0 auto; /* Centers the body ho  zontally in the viewport */
+  
+    border-radius: 10%;
+    padding-bottom: 3%;
+    padding-top: 1%;
+    display: flex;
+    justify-content: center; /* Centers child elements horizontally */
+    align-items: center; /* Centers child elements vertically */
+    height: 100vh; /* Ensures the body takes the full viewport height */
+    flex-direction: column; /* Ensures elements stack vertically */
 }
 
 h2{
-    text-align: left;
+    text-align: center;
     padding-top: 10px;
     margin-top: 10px;
     padding-bottom: 10px;   
@@ -22,7 +33,7 @@ h2{
 }
 
 h3 {
-    text-align: left;
+    text-align: center;
     padding-top: 10px;
     margin-top: 10px;
     padding-bottom: 10px;
@@ -40,15 +51,5 @@ th {
     text-align: center;
 }
 
-
-/* p{ 
-    
-margin-left: 10px;
- padding:  5px;
- display:flex;
- flex-direction: row;
- font-size: 12px;
- 
-} */
 
 

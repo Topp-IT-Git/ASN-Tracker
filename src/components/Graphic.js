@@ -23,7 +23,7 @@ ChartJS.register(
 )
 const Graphic = () => {
 const [data,setData] = useState([]);
-localStorage.clear()
+
   useEffect(()=>{
    fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
    .then(res =>res.json())
@@ -91,7 +91,8 @@ if (!data.length) return <p>Loading...</p>;
  const options={}
  // hieronder is de html hier worden alle functies gerenderd
   return (
-    < >
+      < >
+          <div className="grafieken">
         <h3>Aandelen</h3>
      <div style={{ width:"600px", height:"300px"}}>
 
@@ -102,11 +103,11 @@ if (!data.length) return <p>Loading...</p>;
       
         <Line class="grafiek" data={data2} options={options}/>
       
+              </div>
         </div>
     </>
-    
   )
 }
 
 export default Graphic
-
+// DIT CODE IS SECHT EN PEOPIE EN JE WET NEIT HOE JE CODERD
