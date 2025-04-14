@@ -5,6 +5,12 @@ import {TableKleur,ResetKleur} from './TableKleur.js'
 export default function Table(){
   const [data,setData]=useState([]);
 
+  
+
+
+
+
+
 
   useEffect(()=>{
 
@@ -53,6 +59,7 @@ export default function Table(){
     </tbody>
   
   </table>
+
   </div>
   )}
   
