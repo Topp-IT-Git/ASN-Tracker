@@ -107,8 +107,3 @@ export default function NumberInput() {
         </div>
     );
 }
-
-
-
-
-

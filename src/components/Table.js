@@ -5,12 +5,6 @@ import {TableKleur,ResetKleur} from './TableKleur.js'
 export default function Table(){
   const [data,setData]=useState([]);
 
-  
-
-
-
-
-
 
   useEffect(()=>{
    fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')

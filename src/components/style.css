@@ -1,4 +1,4 @@
-/* latin */
+ 
 @font-face {
     font-family: 'Roboto Mono';
     font-style: normal;
@@ -56,7 +56,7 @@ tr:nth-child(even) {
 
 .grafieken {
     padding-bottom: 45%;
-    justify-content: center; /* Centers child elements horizontally */
+    justify-content: center; 
     align-items: center;
     text-align: center; 
     display:flex;
@@ -72,8 +72,7 @@ margin-left: 1%;
 }
 
 .kopen {
-    justify-content: center; /* Centers child elements horizontally */
+    justify-content: center; 
     align-items: center;
     text-align: center;
-
 }

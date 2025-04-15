@@ -1,25 +1,25 @@
 import Table from './components/Table';
 import './App.css';
-import {Routes,Route}  from 'react-router-dom' 
-import Graphic from './components/Graphic';
-import BoughtStocks from './components/BoughtStocks';
-import Navbar from "./Navbar.js"
-import Graph from "./pages/Graph.js" 
-import Trading from "./pages/Trading.js"
 
+import Navbar   from "./components/Navbar"
+
+import Graph from "./pages/Graph"
+import Trade from "./pages/Trade"
+
+import {Routes,Route} from 'react-router-dom'
 function App() {
  // Event handler for hovering over the paragraph
-
     return (
 
     <div className="App">
+
+    <Navbar/>
+        <Routes>
+          <Route path="./graph" element={<Graph/>}/>
+          <Route path="./trade" element={<Trade/>}/>
        
-        <Navbar/>
-      
-      <h2>Koersen ASN Beleggingsfondsen</h2>
-       <Table/>
-       <Graphic/>
-       <BoughtStocks/>
+        </Routes>
+
 
   
 

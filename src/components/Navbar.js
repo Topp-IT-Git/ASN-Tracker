@@ -1,14 +1,11 @@
 import React from 'react'
 import "./navBarStyle.css"
-
 //Importing the Link component from React Router to handle client-side routing
 import {NavLink,Link} from 'react-router-dom'
 
 export default function Navbar() {
   return (
-  
-    
-      <nav className="navbar-container">
+  <nav className="navbar-container">
         <Link to="./" className="title"> Koersen ASN Beleggingsfondsen</Link>
         <ul className="links">
        { /*to="/"` navigates to the root route of the application */}
@@ -23,7 +20,7 @@ export default function Navbar() {
   )
 }
 // import {AppBar,Toolbar, Typography,Stack,Button} from "@mui/material"
-   {/* // <AppBar  sx={{ bgcolor: "white" }}  >
+   /* // <AppBar  sx={{ bgcolor: "white" }}  >
         //     <Toolbar>
         //         <Typography color="textPrimary" variant="h5" component="div" sx={{ flexGrow: 1 }}>
         //         Koersen ASN Beleggingsfondsen
@@ -33,4 +30,4 @@ export default function Navbar() {
         //             <Button sx={{color:"black"}}>Trading Screen</Button>
         //         </Stack>
         //     </Toolbar>
-        // </AppBar> */}
+        // </AppBar> */
