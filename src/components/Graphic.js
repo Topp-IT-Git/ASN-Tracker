@@ -91,7 +91,8 @@ if (!data.length) return <p>Loading...</p>;
  
  // hieronder is de html hier worden alle functies gerenderd
   return (
-    < >
+      < >
+          <div className="grafieken">
         <h3>Aandelen</h3>
      <div style={{ width:"600px", height:"300px"}}>
 
@@ -100,9 +101,9 @@ if (!data.length) return <p>Loading...</p>;
       
       <Line class="grafiek" data={data2}/>
       
+              </div>
         </div>
     </>
-    
   )
 }
 
