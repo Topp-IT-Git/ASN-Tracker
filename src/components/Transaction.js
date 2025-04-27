@@ -1,7 +1,7 @@
 import React from 'react'
  import './transactionHistory.css'
 
- export default function TransactionHistory() {
+ export default function Transaction() {
    return (     
    <div>
      <h3>📜 Trade History</h3>

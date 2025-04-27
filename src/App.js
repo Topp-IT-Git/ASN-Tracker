@@ -1,7 +1,7 @@
 import {Routes,Route}  from 'react-router-dom' 
 import Navbar   from "./components/Navbar"
 import Footer from './components/Footer.js'
-import TransactionHistory from './components/TransactionHistory.js'
+import Transaction from './components/Transaction.js'
 import Graph from "./pages/Graph.js"
 import TransactionHistory from "./pages/TransactionHistory.js"
 import Stocks from "./pages/Stocks.js"
@@ -20,7 +20,7 @@ function App() {
           <Route path="/Stocks" element={<Stocks/>}/>
           <Route path="/TransactionHistory" element={<TransactionHistory/>}/>
         </Routes>
-        <TransactionHistory/>
+        <Transaction/>
         <Footer/>
     </div>
   );
