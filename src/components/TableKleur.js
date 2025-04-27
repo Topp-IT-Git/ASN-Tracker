@@ -22,7 +22,7 @@ const TableKleur = (price) => {
     priceArray.push(price["price"])
     const rendement = (priceArray[priceArray.length-1] - checkArray[priceArray.indexOf(price["price"])/2 + 1]).toFixed(2)
     return (
-        <div style={{backgroundColor: rendement > 0 ? 'green' : rendement < 0 ? 'red' : 'white'}}>
+        <div style={{backgroundColor: rendement > 0 ? '#26B170' : rendement < 0 ? '#D2222D' : 'white'}}>
             <p>{Object.values(price)}</p>
         </div>
     )

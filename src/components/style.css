@@ -8,12 +8,8 @@
 }
 
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7e7d0;
-}
-
 .container {
+    text-align:center;
     max-width: 800px;
     margin: 0 auto;
     background-color: #ffffff;
@@ -61,18 +57,4 @@ tr:nth-child(even) {
     text-align: center; 
     display:flex;
     flex-direction: column;
-}
-#koopknop{
-margin-left: 1%;
-}
-
-#aantalinput{
-    margin-bottom: 1%;
-
-}
-
-.kopen {
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
 }

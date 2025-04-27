@@ -1,16 +1,12 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-
+import "./boughtstock.css"
     
 
 export default function NumberInput() {
     const [number, setNumber] = useState("");
     const [submittedNumber, setSubmittedNumber] = useState(0);
     const [balance, setBalance] = useState(200);
-
-
-
-
 
 
     function getDate() {
@@ -21,17 +17,12 @@ export default function NumberInput() {
         return `${month}/${date}/${year}`;
     }
     
-        const [currentDate, setCurrentDate] = useState(getDate());
-
+    const [currentDate, setCurrentDate] = useState(getDate());
     const [data, setData] = useState([]);
     
    
 
  
-
-
-
-
     // Load saved balance and submitted number from localStorage on mount
     useEffect(() => {
         fetch('https://asn-tracker.paulvandenburg.nl/api/fund-prices?funds=1&date_from=2025-04-14&date_to=2025-04-14')
@@ -82,7 +73,7 @@ export default function NumberInput() {
 
             <form id="aantalinput" onSubmit={handleSubmit} >
                 <input
-                    
+                
                     type="number"
                     value={number}
                     onChange={(e) => setNumber(e.target.value)}

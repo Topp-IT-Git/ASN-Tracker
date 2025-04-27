@@ -40,12 +40,8 @@ if (!data.length) return <p>Loading...</p>;
       {
       data :Object.values(data[0]['prices']).reverse(),//[74,50,78,45,80,6],//
       label: 'ASN Duurzaam Aandelenfonds',
-
-
       borderColor: '#41775e',
       backgroundColor: '#41775e',
-
-
       borderWidth: 3,
       pointBorderwidth: 4
     }
@@ -57,50 +53,36 @@ if (!data.length) return <p>Loading...</p>;
     datasets:[
       {
         label:  ' ASN Mixfonds Offensief',
-
-
       borderColor: '#fada87',
       backgroundColor: '#fada87',
-
-
       data :Object.values(data[1]['prices']).reverse(),//[74,50,78,45,80,6],//
- 
-
       borderWidth: 3,
       pointBorderwidth: 4
     },
     {
       label: 'ASN Mixfonds Zeer Offensief',
-       
-
-
       borderColor: '#ee6952',
       backgroundColor: '#ee6952',
-
-
       data :Object.values(data[2]['prices']).reverse(),//[82.1,82.84,82.84,83.66,83.41,83.76,83.76],//
-
-
       borderWidth: 4,
       pointBorderwidth: 4,}
-    
-  ]
+    ]
   }
  
  // hieronder is de html hier worden alle functies gerenderd
   return (
       < >
-          <div className="grafieken">
-        <h3>Aandelen</h3>
-     <div style={{ width:"600px", height:"300px"}}>
+      <div className="grafieken">
+          <h3>Aandelen</h3>
+        <div style={{ width:"600px", height:"300px"}}>
 
-      <Line class="grafiek" data={ data1 } />
-      <h3>Mixfondsen</h3>
+          <Line className="grafiek" data={ data1 } />
+          <h3>Mixfondsen</h3>
       
-      <Line class="grafiek" data={data2}/>
+         <Line className="grafiek" data={data2}/>
       
-              </div>
         </div>
+      </div>
     </>
   )
 }
