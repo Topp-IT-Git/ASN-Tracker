@@ -27,3 +27,52 @@ button{
     background-color:rgb(71, 183, 136);
     gap:1rem;
 }
+
+.history-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px; /* ruimte tussen rijen */
+    margin-top: 1rem;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #222;
+}
+
+    .history-table th,
+    .history-table td {
+        padding: 12px 20px;
+        text-align: left;
+        background-color: #f8f8f8;
+        /* border-radius verwijderd */
+        box-shadow: 0 0 5px rgba(0,0,0,0.05);
+        vertical-align: middle;
+    }
+
+    .history-table th {
+        background-color: #f39f86;
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .history-table tr:hover td {
+        background-color: #e1eaff;
+        cursor: default;
+    }
+
+    .history-table td:nth-child(1) {
+        width: 25%; /* Datum */
+    }
+
+    .history-table td:nth-child(2) {
+        width: 15%; /* Aantal */
+    }
+
+    .history-table td:nth-child(3) {
+        width: 30%; /* Prijs per aandeel */
+    }
+
+    .history-table td:nth-child(4) {
+        width: 30%; /* Totaalprijs */
+    }
