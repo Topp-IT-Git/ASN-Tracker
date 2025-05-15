@@ -5,15 +5,8 @@ import {TableKleur,ResetKleur} from './TableKleur.js'
 export default function Table(){
   const [data,setData]=useState([]);
 
-  
-
-
-
-
-
 
   useEffect(()=>{
-
    fetch('https://asn-tracker.paulvandenburg.nl/get_fund_data.php')
    .then(res =>res.json())
     .then(data => setData(data))
@@ -32,9 +25,7 @@ export default function Table(){
     <th>Koersen</th>
     {/*hieronder wordt door de data geparsed het verwerkt de bovenste rij van de tabel. hierin vind je de kopje koersen en de datums van elke aandeel*/}
     {Object.keys(data[0].prices).map(price =>
-    (<td className="datums">{price}</td>
-            
-          ))}
+    (<td  className="datums">{price}</td>))}
     </tr>
     </thead>
 

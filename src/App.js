@@ -1,22 +1,27 @@
-import Table from './components/Table';
-import './App.css';
-import Graphic from './components/Graphic';
-import BoughtStocks from './components/BoughtStocks';
+import {Routes,Route}  from 'react-router-dom' 
+import Navbar   from "./components/Navbar"
+import Footer from './components/Footer.js'
 
-
+import Graph from "./pages/Graph.js"
+import TransactionHistory from "./pages/TransactionHistory.js"
+import Stocks from "./pages/Stocks.js"
+import Home from './pages/Home.js';
+import "./App.css"
 function App() {
  // Event handler for hovering over the paragraph
 
     return (
-
     <div className="App">
-      
-      <h2>Koersen ASN Beleggingsfondsen</h2>
-       <Table/>
-       <Graphic/>
-       <BoughtStocks/>
 
-  
+    <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Graph" element={<Graph/>}/>
+          <Route path="/Stocks" element={<Stocks/>}/>
+          <Route path="/TransactionHistory" element={<TransactionHistory/>}/>
+      </Routes>
+       
+        <Footer/>
     </div>
   );
 }

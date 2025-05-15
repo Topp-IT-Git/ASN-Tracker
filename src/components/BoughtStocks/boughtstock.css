@@ -1,0 +1,29 @@
+#koopknop{
+margin-left: 1%;
+}
+
+#aantalinput{
+margin-bottom: 3%;
+padding: 1rem;
+}
+
+.kopen {
+    width:400px;
+    border:1px rgb(168, 93, 93) solid;
+    text-align: center;
+    margin-top:10px;
+    margin:30px auto ;
+    width: 50%;
+    border: 1px solid #e69377 ;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+button{
+    padding:0.5rem;
+    border:none;
+    border-radius: 5px;;
+    background-color:rgb(71, 183, 136);
+    gap:1rem;
+}

@@ -1,0 +1,26 @@
+.trade-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .trade-table th,
+  .trade-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .trade-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .trade-table td.buy {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .trade-table td.sell {
+    color: red;
+    font-weight: bold;
+  }
