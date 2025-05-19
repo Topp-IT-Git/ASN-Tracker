@@ -40,8 +40,8 @@ if (!data.length) return <p>Loading...</p>;
       {
       data :Object.values(data[0]['prices']).reverse(),//[74,50,78,45,80,6],//
       label: 'ASN Duurzaam Aandelenfonds',
-      borderColor: '#41775e',
-      backgroundColor: '#41775e',
+      borderColor:'#b1a0e2',
+      backgroundColor: "#554096",
       borderWidth: 3,
       pointBorderwidth: 4
     }

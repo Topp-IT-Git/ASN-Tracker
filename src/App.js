@@ -1,7 +1,6 @@
 import {Routes,Route}  from 'react-router-dom' 
 import Navbar   from "./components/Navbar"
 import Footer from './components/Footer.js'
-
 import Graph from "./pages/Graph.js"
 import TransactionHistory from "./pages/TransactionHistory.js"
 import Stocks from "./pages/Stocks.js"

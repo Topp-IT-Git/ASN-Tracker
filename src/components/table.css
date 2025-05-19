@@ -10,39 +10,36 @@
 
 .container {
     text-align:center;
+    width:80%;
     max-width: 800px;
     margin: 0 auto;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); display: flex;
+ display:flex;
 
 }
 
-th, td {
+table {
+    border:#a898db 1px solid;
+    margin-left:95px;
+}
+
+
+th, td ,th {
     text-align: center;
-}
-
-th {
-    background-color: #fada87;
+    background-color: #ebe9f0;
     font-weight: bold;
-
-}
-
-
-td {
-
-    background-color: white;    
-  
 }
 
 tr:nth-child(even) {
     background-color: #f9f9f9;
+    
 }
 
 .datums {
     font-weight: bold;
-    background-color: #ffa587;
-
+    background-color: #eae8f0;
 }
 
 .grafiek {

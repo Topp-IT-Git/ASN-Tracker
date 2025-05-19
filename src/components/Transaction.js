@@ -1,12 +1,22 @@
 import React from 'react'
- import './transactionHistory.css'
-
+ import './transaction.css'
+import {useEffect,useState} from "react"
  export default function Transaction() {
-   return (     
-   <div>
-     <h3>📜 Trade History</h3>
-     <p>No trades yet. </p>
-      
+ 
+  const [fund ,setFund]=useState({})
+
+useEffect(()=>{
+    fetch("https://asn-tracker.paulvandenburg.nl/get_fund_data.php")
+    .then (res => res.json())
+    .then(data=>setFund(data))
+},[])
+
+  return (
+ <div>
+    <ul>
+        {fund.fundID}
+      {fund.FundName}
+    </ul>
         <table className='trade-table'>           
           <thead>
              <tr>    

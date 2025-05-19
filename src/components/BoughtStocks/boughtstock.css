@@ -1,3 +1,7 @@
+*{  box-sizing: border-box}
+.table-container{
+    overflow-x:auto;
+}
 #koopknop{
 margin-left: 1%;
 }
@@ -9,12 +13,12 @@ padding: 1rem;
 
 .kopen {
     width:400px;
-    border:1px rgb(168, 93, 93) solid;
+
     text-align: center;
     margin-top:10px;
     margin:30px auto ;
     width: 50%;
-    border: 1px solid #e69377 ;
+    border: 1px solid #d4d2d1 ;
     border-radius: 5px;
     padding: 10px;
 }
@@ -30,6 +34,7 @@ button{
 
 .history-table {
     width: 100%;
+    min-width:600px;
     border-collapse: separate;
     border-spacing: 0 12px; /* ruimte tussen rijen */
     margin-top: 1rem;
@@ -49,8 +54,8 @@ button{
     }
 
     .history-table th {
-        background-color: #f39f86;
-        color: white;
+        background-color:#554096;
+        color:#d3d1d1;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.05em;

@@ -7,15 +7,15 @@ body {
     margin:0;
 }
 .nav{
-    height:70px;
-    background-color: #f39f86;
-    color:rgb(242, 234, 234);
+    height:60px;
+    background-color: #fbfafc;
+    color:#4F3A8E;
     display:flex;
     justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
     padding: 0 1rem;
-    border:#e69377 3px solid;
+    border-bottom:#5F3992 3px solid;
   
 
 }
@@ -43,9 +43,9 @@ body {
 
 }
 .nav li.active{
-    background-color: #e28161;
+    background-color: #e0ddf1;
 }
 
 .nav li:hover{
-    background-color:  #c3765d;
+    background-color:   #c8c4dd;
 }

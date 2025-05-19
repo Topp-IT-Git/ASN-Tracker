@@ -1,4 +1,4 @@
-import './style.css';
+import './table.css';
 import React from 'react'
 
 let checkArray = []
